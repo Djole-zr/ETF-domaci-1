@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Registraciona forma</title>
+    <style>
+      td {
+        padding-top: 10px;
+      }
+      fieldset {
+        background-color: beige;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>Registracija korisnika</h2>
+
+    <form>
+      <fieldset>
+        <legend>Lične informacije</legend>
+        <img src="licne.png" style="float: right; width: 20%" />
+        <table>
+          <tr>
+            <td><label for="imeID">Ime:</label></td>
+            <td>
+              <input
+                type="text"
+                name="ime"
+                id="imeID"
+                placeholder="Unesite ime"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="prezimeID">Prezime:</label></td>
+            <td>
+              <input
+                type="text"
+                name="prezime"
+                id="prezimeID"
+                placeholder="Unesite prezime"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="mestoID">Mesto rođenja:</label></td>
+            <td>
+              <input
+                type="text"
+                name="mesto"
+                id="mestoID"
+                placeholder="Mesto rođenja"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="datumID">Datum rođenja:</label></td>
+            <td>
+              <input type="date" name="datum" id="datumID" />
+            </td>
+          </tr>
+          <tr>
+            <td><label>Pol:</label></td>
+            <td>
+              <label for="muskiID">Muški</label>
+              <input type="radio" id="muskiID" name="pol" value="muski" />
+            </td>
+            <td>
+              <label for="zenskiID">Ženski</label>
+              <input type="radio" id="zenskiID" name="pol" value="zenski" />
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+      <br />
+      <fieldset>
+        <legend>Kontakt informacije</legend>
+        <img src="contact.png" style="float: right; width: 20%" />
+        <table>
+          <tr>
+            <td><label for="ulicaID">Ulica:</label></td>
+            <td><input type="text" name="ulica" id="ulicaID" /></td>
+            <td><label for="brojID">Kućni broj:</label></td>
+            <td><input type="text" name="broj" id="brojID" /></td>
+          </tr>
+          <tr>
+            <td><label for="gradID">Grad:</label></td>
+            <td><input type="text" name="grad" id="gradID" /></td>
+          </tr>
+          <tr>
+            <td><label for="brojTelID">Broj telefona:</label></td>
+            <td>
+              <input
+                type="tel"
+                id="brojTelID"
+                name="brojTel"
+                pattern="06[0-9]{1}[0-9]+"
+                placeholder="06X..."
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="mailID">Email:</label></td>
+            <td><input type="email" id="mailID" name="email" /></td>
+          </tr>
+          <tr>
+            <td><label>Možete me kontaktirati:</label></td>
+            <td>
+              &nbsp; &nbsp; &nbsp;
+              <label for="kontakt1">Email-om</label>
+              <input
+                type="checkbox"
+                id="kontakt1"
+                name="kontakt"
+                value="email"
+              />
+              <label for="kontakt2">Telefonom</label>
+              <input type="checkbox" id="kontkat2" name="kontakt" value="tel" />
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+      <fieldset>
+        <legend>Registracija</legend>
+        <img src="login.png" style="float: right; width: 20%" />
+        <table>
+          <tr>
+            <td><label for="korisnickoIme">Korisničko ime:</label></td>
+            <td>
+              <input type="text" name="korisnickoIme" id="korisnickoIme" />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="lozinka">Lozinka:</label></td>
+            <td><input type="password" name="lozinka" id="lozinka" /></td>
+          </tr>
+          <tr>
+            <td><label for="potvrdaLozinke">Ponovi lozinku:</label></td>
+            <td>
+              <input
+                type="password"
+                name="potvrdaLozinke"
+                id="potvrdaLozinke"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="tipPretplate">Tip pretplate:</label></td>
+            <td><select name="tipPretplate" id="tipPretplate">
+              <option>- -  izaberi tip pretplate  - -</option>
+              <option value="stand">Standard</option>
+              <option value="prem">Premijum</option>
+            </select></td>
+          </tr>
+        </table>
+      </fieldset>
+
+      <br />
+      <input
+        type="submit"
+        value="Registruj se"
+        style="background-color: beige; height: 40px"
+      />
+      <input
+        type="reset"
+        value="Obriši podatke"
+        style="float: right; background-color: coral; height: 40px"
+      />
+    </form>
+  </body>
+</html>
